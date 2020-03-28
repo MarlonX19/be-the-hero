@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { View, Image, Text, TouchableOpacity, Linking } from 'react-native';
+import { View, Image, StatusBar, Text, TouchableOpacity, Linking } from 'react-native';
 
 import styles from './styles';
 
@@ -31,6 +31,7 @@ export default function Detail() {
 
   return (
     <View style={styles.container}>
+      <StatusBar hidden />
       <View style={styles.header}>
         <Image source={logoImg} />
         <TouchableOpacity

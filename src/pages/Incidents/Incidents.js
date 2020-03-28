@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
+import { View, FlatList, Text, Image, TouchableOpacity, StatusBar } from 'react-native';
 
 import api from '../../services/api';
 
@@ -47,6 +47,7 @@ export default function Incidents() {
 
   return (
     <View style={styles.container}>
+      <StatusBar hidden />
       <View style={styles.header}>
         <Image source={logoImg} />
         <Text style={styles.headerText}>Total de {total} casos</Text>
